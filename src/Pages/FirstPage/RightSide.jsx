@@ -111,7 +111,7 @@ const RightSide = () => {
           <img className="bg-[#006DF914] p-3" src={setting} alt="" />
         </div>
         <div className="mt-14 space-y-4 p-3">
-          <p>Integrations</p>
+          <p className="font-bold">Integrations</p>
           <div className="w-full h-40 bg-[#F1F1F1]"></div>
         </div>
         <div className="flex justify-between mt-10 p-3">
