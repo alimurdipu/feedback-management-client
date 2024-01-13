@@ -4,7 +4,7 @@ import RightSide from "./RightSide";
 
 const FirstPage = () => {
   return (
-    <div className="w-full grid grid-cols-3 gap-5 p-4">
+    <div className="w-full grid grid-cols-3 gap-5 p-8">
       <RightSide/>
     </div>
   )

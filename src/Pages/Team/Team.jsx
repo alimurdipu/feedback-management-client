@@ -18,7 +18,7 @@ const ReqUser = [
 const Team = () => {
   return (
     <>
-      <div className="w-full flex flex-col p-5">
+      <div className="w-full flex flex-col p-8">
       <div className="w-full grid grid-cols-3 gap-5 p-4">
         <RightTeam />
       </div>
