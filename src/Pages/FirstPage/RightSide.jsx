@@ -3,8 +3,6 @@ import { IoIosArrowDown } from "react-icons/io";
 import { useForm } from "react-hook-form";
 import visa from "../../../public/images/visa.svg";
 import setting from "../../../public/images/setting.svg";
-import pdf from "../../../public/images/pdf.svg"
-import pdfD from "../../../public/images/pdfD.svg"
 
 const Billing = [
   {

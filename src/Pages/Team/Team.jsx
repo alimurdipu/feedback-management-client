@@ -1,8 +1,5 @@
 import React from "react";
 import RightTeam from "./RightTeam";
-import pic from "../../../public/images/Ellipse 7.svg"
-import { IoIosArrowDown } from "react-icons/io";
-import deleteIcon from "../../../public/images/delete.svg"
 
 const ReqUser = [
   {
