@@ -1,12 +1,10 @@
 import React from "react";
-import LeftSide from "./LeftSide";
+// import LeftSide from "./LeftSide";
 import RightSide from "./RightSide";
 
 const FirstPage = () => {
   return (
-    <div className="grid grid-cols-6 gap-5">
-      <LeftSide/>
-      {/* Right Side */}
+    <div className="w-full grid grid-cols-3 gap-5 p-4">
       <RightSide/>
     </div>
   )

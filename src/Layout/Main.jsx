@@ -1,10 +1,11 @@
 import React from 'react'
-import Home from '../Pages/Home/Home'
 import { Outlet } from 'react-router-dom'
+import SharedLeft from '../Shared/SharedLeft'
 
 const Main = () => {
   return (
-    <div>
+    <div className='flex'>
+        <SharedLeft/>
         <Outlet/>
     </div>
   )

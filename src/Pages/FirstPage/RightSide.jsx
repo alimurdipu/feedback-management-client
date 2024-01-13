@@ -1,6 +1,4 @@
 import React from "react";
-import { AiOutlineControl } from "react-icons/ai";
-import { TbArrowsSort } from "react-icons/tb";
 import { IoIosArrowDown } from "react-icons/io";
 import { useForm } from "react-hook-form";
 import visa from "../../../public/images/visa.svg";
@@ -8,7 +6,36 @@ import setting from "../../../public/images/setting.svg";
 import pdf from "../../../public/images/pdf.svg"
 import pdfD from "../../../public/images/pdfD.svg"
 
-// form
+const Billing = [
+  {
+    id: 1,
+    pdfpic: "../../../public/images/pdf.svg",
+    pdfdpic: "../../../public/images/pdfD.svg",
+    invoiceno: "Invoice #13245",
+    date: "06/01/2023"
+  },
+  {
+    id: 2,
+    pdfpic: "../../../public/images/pdf.svg",
+    pdfdpic: "../../../public/images/pdfD.svg",
+    invoiceno: "Invoice #13246",
+    date: "07/01/2023"
+  },
+  {
+    id: 3,
+    pdfpic: "../../../public/images/pdf.svg",
+    pdfdpic: "../../../public/images/pdfD.svg",
+    invoiceno: "Invoice #13247",
+    date: "07/01/2023"
+  },
+  {
+    id: 4,
+    pdfpic: "../../../public/images/pdf.svg",
+    pdfdpic: "../../../public/images/pdfD.svg",
+    invoiceno: "Invoice #13248",
+    date: "08/01/2023"
+  },
+]
 
 const RightSide = () => {
   const { register, handleSubmit } = useForm();
@@ -16,9 +43,9 @@ const RightSide = () => {
 
   return (
     <>
-      <div className="col-span-3">
+      <div className="col-span-2">
         {/* Right Side */}
-        <div className="mt-4 ">
+        <div className="mt-4">
           <div className="flex justify-between items-center">
             <div className="flex flex-col justify-start items-start gap-1">
               <p>Environment</p>
@@ -88,7 +115,7 @@ const RightSide = () => {
                 </button>
               </div>
             </div>
-            <div className="w-[580px] m-auto bg-opacity-20 rounded-md bg-white p-5">
+            <div className="w-[650px] m-auto bg-opacity-20 rounded-md bg-white p-5">
               <div className="flex justify-between">
                 <div className="space-y-3">
                   <h2 className="text-2xl text-white">Payment</h2>
@@ -106,53 +133,32 @@ const RightSide = () => {
           {/* card end */}
         </div>
       </div>
-      <div className="col-span-2">
+        <div className="w-full col-span-1">
         <div className="flex justify-end m-3">
-          <img className="bg-[#006DF914] p-3" src={setting} alt="" />
+          <button><img className="bg-[#006DF914] p-2" src={setting} alt="" /></button>
         </div>
-        <div className="mt-14 space-y-4 p-3">
+        <div className="mt-14 space-y-4 p-1">
           <p className="font-bold">Integrations</p>
           <div className="w-full h-40 bg-[#F1F1F1]"></div>
         </div>
-        <div className="flex justify-between mt-10 p-3">
+        <div className="flex justify-between mt-10 p-1">
           <h2 className="font-bold">Personal information</h2>
           <p className="font-bold text-[#006DF9]">Edit</p>
         </div>
-        <div className="space-y-4 p-3">
-        <div className="flex justify-between bg-[#F1F1F1]  items-center p-3">
-            <img src={pdf} alt="" />
-            <div className="flex justify-between items-center">
-                <p>Invoice #13245</p>
-                <p>06/01/2023</p>
-            </div>
-            <img src={pdfD} alt="" />
-        </div>
-        <div className="flex justify-between bg-[#F1F1F1]  items-center p-3">
-            <img src={pdf} alt="" />
-            <div className="flex justify-between items-center">
-                <p>Invoice #13245</p>
-                <p>06/01/2023</p>
-            </div>
-            <img src={pdfD} alt="" />
-        </div>
-        <div className="flex justify-between bg-[#F1F1F1]  items-center p-3">
-            <img src={pdf} alt="" />
-            <div className="flex justify-between items-center">
-                <p>Invoice #13245</p>
-                <p>06/01/2023</p>
-            </div>
-            <img src={pdfD} alt="" />
-        </div>
-        <div className="flex justify-between bg-[#F1F1F1]  items-center p-3">
-            <img src={pdf} alt="" />
-            <div className="flex justify-between items-center">
-                <p>Invoice #13245</p>
-                <p>06/01/2023</p>
-            </div>
-            <img src={pdfD} alt="" />
-        </div>
+        <div className="space-y-4 p-1">
+        {
+          Billing.map(bill => <div key={bill.id} className="flex justify-between bg-[#F1F1F1]  items-center p-1">
+          <img src={bill.pdfpic} alt="" />
+          <div className="flex justify-between items-center">
+              <p>{bill.invoiceno}</p>
+              <p>{bill.date}</p>
+          </div>
+          <img src={bill.pdfdpic} alt="" />
+      </div>)
+        }
         </div>
       </div>
+      
     </>
   );
 };
