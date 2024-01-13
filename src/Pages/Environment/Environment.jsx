@@ -1,12 +1,17 @@
-import React from 'react'
-import RightEnvironment from './RightEnvironment'
+import React from "react";
+import TopEnvironment from "./TopEnvironment";
 
 const Environment = () => {
   return (
-    <div className="w-full grid grid-cols-3 gap-5 p-4">
-      <RightEnvironment/>
-    </div>
-  )
-}
+    <>
+      <div className="p-4">
+        <TopEnvironment />
+      </div>
+      <div className="col-span-5">
+        
+      </div>
+    </>
+  );
+};
 
-export default Environment
+export default Environment;

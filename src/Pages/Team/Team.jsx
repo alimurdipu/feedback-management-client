@@ -1,5 +1,6 @@
 import React from "react";
 import RightTeam from "./RightTeam";
+import pic from "../../../public/images/Ellipse 7.svg"
 
 const ReqUser = [
   {
@@ -34,7 +35,7 @@ const Team = () => {
           {
             ReqUser.map(requser => <div key={requser.id} className="flex justify-between p-4 bg-[#F1F1F1]  items-center">
             <div className="flex items-center gap-4">
-              <img src={requser.pic} alt="" />
+              <img src={pic} alt="" />
               <p>{requser.name}</p>
               <button className="flex justify-around items-center w-24 px-3 py-2 font-bold text-center bg-[#006DF914] text-[#006DF9] rounded-full">
               Pending

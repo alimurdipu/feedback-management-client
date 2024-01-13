@@ -2,6 +2,7 @@ import React from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import setting from "../../../public/images/setting.svg";
 import deleteIcon from "../../../public/images/delete.svg";
+import pic from "../../../public/images/Ellipse 7.svg"
 
 const Users = [
     {
@@ -68,7 +69,7 @@ const RightTeam = () => {
         {
             Users.map(user =><div key={user.id} className="flex justify-between p-4 bg-[#F1F1F1]  items-center">
             <div className="flex items-center gap-4">
-              <img src={user.pic} alt="" />
+              <img src={pic} alt="" />
               <p>{user.name}</p>
             </div>
             <div className="flex items-center gap-4">

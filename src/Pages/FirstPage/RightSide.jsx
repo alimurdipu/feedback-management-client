@@ -3,6 +3,8 @@ import { IoIosArrowDown } from "react-icons/io";
 import { useForm } from "react-hook-form";
 import visa from "../../../public/images/visa.svg";
 import setting from "../../../public/images/setting.svg";
+import pdfpic from "../../../public/images/pdf.svg"
+import pdfdpic from "../../../public/images/pdfD.svg"
 
 const Billing = [
   {
@@ -146,12 +148,12 @@ const RightSide = () => {
         <div className="space-y-4 p-1">
         {
           Billing.map(bill => <div key={bill.id} className="flex justify-between bg-[#F1F1F1]  items-center p-1">
-          <img src={bill.pdfpic} alt="" />
+          <img src={pdfpic} alt="" />
           <div className="flex justify-between items-center">
               <p>{bill.invoiceno}</p>
               <p>{bill.date}</p>
           </div>
-          <img src={bill.pdfdpic} alt="" />
+          <img src={pdfdpic} alt="" />
       </div>)
         }
         </div>
