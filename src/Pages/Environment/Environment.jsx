@@ -4,11 +4,8 @@ import TopEnvironment from "./TopEnvironment";
 const Environment = () => {
   return (
     <>
-      <div className="p-8">
+      <div className="flex-1 p-4">
         <TopEnvironment />
-      </div>
-      <div className="col-span-5">
-
       </div>
     </>
   );

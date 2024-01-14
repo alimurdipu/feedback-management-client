@@ -43,10 +43,9 @@ const RightSide = () => {
 
   return (
     <>
-      <div className="col-span-2">
+      
         {/* Right Side */}
-        <div className="mt-4">
-          <div className="flex justify-between items-center">
+        <div className="flex justify-between p-8">
             <div className="flex flex-col justify-start items-start gap-1">
               <p>Environment</p>
               <div className="flex gap-6 items-center">
@@ -55,8 +54,14 @@ const RightSide = () => {
                   <IoIosArrowDown className="font-bold text-2xl text-[#006DF9]" />
                 </button>
               </div>
+              <h2 className="text-3xl font-bold mt-10">Admin</h2>
             </div>
-          </div>
+              <button>
+                <img className="bg-[#006DF914] p-2" src={setting} alt="" />
+              </button>
+        </div>
+        <div className="flex gap-4">
+        <div className="flex-1 p-8">
           {/* form start */}
           <div className="mt-10">
             <div className="flex justify-between mb-10">
@@ -101,9 +106,9 @@ const RightSide = () => {
             </form>
           </div>
           {/* form end */}
-
+          <h2 className="text-xl font-bold mt-16">Admin</h2>
           {/* card start */}
-          <div className="rounded-md mt-10 h-72 bg-gradient-to-r from-[#006DF9] to-[#0b5eca]">
+          <div className="rounded-md h-72 mt-8 bg-gradient-to-r from-[#006DF9] to-[#0b5eca]">
             <div className="flex justify-between p-5">
               <div>
                 <h2 className="text-2xl text-white">Business PRO</h2>
@@ -115,7 +120,7 @@ const RightSide = () => {
                 </button>
               </div>
             </div>
-            <div className="w-[650px] m-auto bg-opacity-20 rounded-md bg-white p-5">
+            <div className="w-[450px] m-auto bg-opacity-20 rounded-md bg-white p-5">
               <div className="flex justify-between">
                 <div className="space-y-3">
                   <h2 className="text-2xl text-white">Payment</h2>
@@ -132,32 +137,29 @@ const RightSide = () => {
           </div>
           {/* card end */}
         </div>
-      </div>
-        <div className="w-full col-span-1">
-        <div className="flex justify-end m-3">
-          <button><img className="bg-[#006DF914] p-2" src={setting} alt="" /></button>
-        </div>
-        <div className="mt-14 space-y-4 p-1">
-          <p className="font-bold">Integrations</p>
-          <div className="w-full h-40 bg-[#F1F1F1]"></div>
+        <div className="flex-1 p-8">
+        <div className="mt-9 space-y-4 p-1">
+          <p className="text-xl font-bold mb-12">Integrations</p>
+          <div className="w-full h-44 bg-[#F1F1F1]"></div>
         </div>
         <div className="flex justify-between mt-10 p-1">
-          <h2 className="font-bold">Personal information</h2>
-          <p className="font-bold text-[#006DF9]">Edit</p>
+          <h2 className="text-xl font-bold">Personal information</h2>
+          <p className="text-xl font-bold text-[#006DF9]">Edit</p>
         </div>
-        <div className="space-y-4 p-1">
+        <div className="mt-6 space-y-4">
         {
           Billing.map(bill => <div key={bill.id} className="flex justify-between bg-[#F1F1F1]  items-center p-1">
           <img src={pdfpic} alt="" />
-          <div className="flex justify-between items-center">
+          <div className="flex gap-10">
               <p>{bill.invoiceno}</p>
               <p>{bill.date}</p>
           </div>
           <img src={pdfdpic} alt="" />
-      </div>)
+        </div>)
         }
         </div>
       </div>
+        </div>
       
     </>
   );

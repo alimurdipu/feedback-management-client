@@ -18,20 +18,18 @@ const ReqUser = [
 const Team = () => {
   return (
     <>
-      <div className="w-full flex flex-col p-8">
-      <div className="w-full grid grid-cols-3 gap-5 p-4">
+      <div className="flex-1 p-4">
         <RightTeam />
-      </div>
-      <div>
-        <div className="border-b border-gray-400"></div>
+      
+        <div className="border-b border-gray-400 my-4"></div>
         {/* downside */}
-        <div className="w-full grid grid-cols-3 gap-5 p-4">
+        <div className="flex">
           <div className="flex flex-col space-y-4 justify-between">
             <h2 className="text-xl font-bold">Pending Invites</h2>
           </div>
-          <div className="col-span-2">
+
           {/* resend card */}
-          <div className="space-y-4">
+          <div className="flex-1 space-y-4 ml-14">
           {
             ReqUser.map(requser => <div key={requser.id} className="flex justify-between p-4 bg-[#F1F1F1]  items-center">
             <div className="flex items-center gap-4">
@@ -53,9 +51,9 @@ const Team = () => {
           }
           </div>
           {/* resend card */}
-          </div>
+          
         </div>
-        </div>
+        
          {/* downside end */}
       </div>
     </>
