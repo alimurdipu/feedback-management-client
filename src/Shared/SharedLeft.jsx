@@ -115,7 +115,7 @@ const SharedLeft = () => {
       <div
         className={`${
           isModal
-            ? "w-[600px] h-[320px] border border-red-500 p-8 rounded-3xl bg-white absolute mt-20 ml-96 z-10 shadow-2xl shadow-gray-600"
+            ? "w-[600px] h-[320px] p-8 rounded-3xl bg-white absolute mt-20 ml-96 z-10 shadow-2xl shadow-gray-600"
             : "hidden"
         }`}
       >
@@ -154,12 +154,12 @@ const SharedLeft = () => {
               </div>
               <div>
                 <p>Role</p>
-                <select {...register("gender")}>
-                  <option value="female">female</option>
-                  <option value="male">male</option>
-                  <option value="other">other</option>
-                  <input type="text" radioGroup="" />
-                </select>
+                <div className="flex justify-around items-center mt-3">
+                <input type="radio" name="" id="" /> 
+                <p>Reviewer</p>
+                <input type="radio" name="" id="" />
+                <p>Administrator</p>
+                </div>
               </div>
             </div>
           </form>
