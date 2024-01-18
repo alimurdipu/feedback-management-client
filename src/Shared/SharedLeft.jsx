@@ -6,9 +6,12 @@ import { RxCross2, RxDashboard } from "react-icons/rx";
 import { IoIosArrowForward, IoIosNotifications } from "react-icons/io";
 import logo from "../../public/images/Group 16.svg";
 import pic1 from "../../public/images/Ellipse 7.svg";
+import { BiTask } from "react-icons/bi";
 import { AiOutlineTeam } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import { Switch } from '@headlessui/react'
+
 
 const navData = [
   {
@@ -25,12 +28,18 @@ const navData = [
   },
   {
     id: 3,
+    pathname: "/task",
+    navname: "Task",
+    icon: <BiTask />,
+  },
+  {
+    id: 4,
     pathname: "/team",
     navname: "Teams",
     icon: <AiOutlineTeam />,
   },
   {
-    id: 4,
+    id: 5,
     pathname: "/admin",
     navname: "Admin",
     icon: <MdOutlineSettings />,
@@ -46,9 +55,21 @@ const SharedLeft = () => {
   const handleModal = () => {
     setIsModal(!isModal);
   };
+
+  const [isDark, setDark] = useState(false);
+  const handleDarkMood = () => {
+    setDark(!isDark);
+  };
+  const [enabled, setEnabled] = useState(false)
   return (
     <>
-      <div className="w-64 min-h-screen bg-[#F1F1F1] relative">
+      <div
+        className={`${
+          isDark
+            ? "w-64 bg-black text-[#006DF9]"
+            : "w-64 min-h-screen bg-[#F1F1F1] relative"
+        }`}
+      >
         <div className="space-y-10">
           <div className="w-56 m-auto flex gap-2 text-center justify-start items-center mt-7">
             <div className="">
@@ -84,13 +105,28 @@ const SharedLeft = () => {
         </div>
         {/* userbar */}
         <div className="w-60 m-auto space-y-3 mt-32 ml-2">
-          <div className="flex text-center justify-start items-center">
+          <div
+            onClick={() => handleDarkMood(false)}
+            className="flex text-center justify-start items-center"
+          >
             <div className="bg-blue-200 rounded-full p-2">
               <BsMoon className="text-2xl text-blue-500" />
             </div>
-            <p className="flex items-center w-60 py-1.5 px-5 font-medium text-start  hover:text-blue-700 ">
-              DayLight{" "}
-            </p>
+            <div className="py-8 ml-4">
+              <Switch
+                checked={enabled}
+                onChange={setEnabled}
+                className={`${enabled ? "bg-[#006DF9]" : "bg-blue-200"}
+          relative inline-flex h-[38px] w-[74px] shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2  focus-visible:ring-white/75`}
+              >
+                <span className="sr-only">Use setting</span>
+                <span
+                  aria-hidden="true"
+                  className={`${enabled ? "translate-x-9" : "translate-x-0"}
+            pointer-events-none inline-block h-[34px] w-[34px] transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out`}
+                />
+              </Switch>
+            </div>
           </div>
 
           <div className="flex">
@@ -155,10 +191,10 @@ const SharedLeft = () => {
               <div>
                 <p>Role</p>
                 <div className="flex justify-around items-center mt-3">
-                <input type="radio" name="" id="" /> 
-                <p>Reviewer</p>
-                <input type="radio" name="" id="" />
-                <p>Administrator</p>
+                  <input type="radio" name="" id="" />
+                  <p>Reviewer</p>
+                  <input type="radio" name="" id="" />
+                  <p>Administrator</p>
                 </div>
               </div>
             </div>

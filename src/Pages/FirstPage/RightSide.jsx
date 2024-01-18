@@ -46,7 +46,7 @@ const RightSide = () => {
     <>
         {/* Right Side */}
         <div>
-        <div className="flex justify-between p-8 relative">
+        <div className="dark:bg-black flex justify-between p-8 relative">
             <div className="flex flex-col justify-start items-start gap-1">
             <p>Environment</p>
               <div className="flex gap-6 items-center">

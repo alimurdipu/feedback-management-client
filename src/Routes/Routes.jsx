@@ -5,6 +5,7 @@ import Main from '../Layout/Main';
 import Team from '../Pages/Team/Team';
 import Dashboard from '../Pages/Dashboard/Dashboard';
 import Environment from '../Pages/Environment/Environment';
+import Task from '../Pages/Task/Task';
 
   export const router = createBrowserRouter([
     {
@@ -18,6 +19,10 @@ import Environment from '../Pages/Environment/Environment';
         {
           path: "/environment",
           element: <Environment/>
+        },
+        {
+          path: "/task",
+          element: <Task/>
         },
         {
           path: '/team',

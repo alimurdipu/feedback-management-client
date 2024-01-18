@@ -1,9 +1,12 @@
 import React from 'react'
+import RightTask from './RightTask'
 
-const SecondPage = () => {
+const Task = () => {
   return (
-    <div>SecondPage</div>
+    <div className='flex-1 p-4'>
+      <RightTask/>
+    </div>
   )
 }
 
-export default SecondPage
+export default Task
