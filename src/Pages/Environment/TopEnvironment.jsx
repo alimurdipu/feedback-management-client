@@ -7,13 +7,14 @@ import gridview from '../../../public/images/grid.svg'
 import envImg from '../../../public/images/Rectangle 153.png';
 import camera from '../../../public/images/camera.svg'
 import vedio from '../../../public/images/vedio.svg'
-import profile from '../../../public/images/Ellipse 7.svg'
+// import profile from '../../../public/images/Ellipse 7.svg'
 import down from '../../../public/images/down.svg'
 import eye from '../../../public/images/eye.svg'
 import massage from '../../../public/images/massage.svg'
 import { IoMdArrowBack } from "react-icons/io";
 import { IoShareSocialOutline } from "react-icons/io5";
 import { FaPencil } from "react-icons/fa6";
+import {profile} from '../../assets/images/Images'
 
 const TopEnvironment = () => {
 
@@ -21,7 +22,7 @@ const TopEnvironment = () => {
   const [userdatas, setuserData] = useState([])
 
   useEffect(() => {
-      fetch("../../../public/environment.json")
+      fetch("/environment.json")
       .then(res => res.json())
       .then(userdata => setuserData(userdata))
   }, [])
