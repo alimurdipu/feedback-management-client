@@ -73,7 +73,7 @@ const SharedLeft = () => {
       <div
         className={`${
           isDark
-            ? "w-full lg:w-64 bg-black text-[#006DF9] h-[calc(100vh-100px)] overflow-y-auto"
+            ? "w-full lg:w-64 bg-black text-[#006DF9]"
             : "w-full lg:w-64 md:min-h-screen bg-[#F1F1F1] relative"
         }`}
       >
@@ -99,7 +99,7 @@ const SharedLeft = () => {
                 className={({ isActive }) =>
                   isActive
                     ? "flex items-center gap-1 w-60 py-1.5 px-5 font-medium text-start  text-blue-700 md:border-l-4 border-blue-700"
-                    : "flex items-center gap-1 w-60 py-1.5 px-5 font-medium text-start md:border-l-4 border-l-[#F1F1F1] "
+                    : "flex items-center gap-1 w-60 py-1.5 px-5 font-medium text-start md:border-l-4 border-l-transparent "
                 }
               >
                 <p className="text-2xl">{data.icon}</p>

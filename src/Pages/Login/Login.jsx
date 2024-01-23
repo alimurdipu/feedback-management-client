@@ -1,5 +1,5 @@
 import React from 'react'
-import {bglogin, mainImg, google, whitelogo} from '../../assets/images/Images'
+import { mainImg, google, whitelogo} from '../../assets/images/Images'
 import { useForm } from 'react-hook-form';
 
 const Login = () => {
@@ -9,7 +9,7 @@ const Login = () => {
   console.log(errors);
 
   return (
-    <div className='md:flex justify-between bg-bg-login w-80 md:w-full bg-cover p-8'>
+    <div className='md:flex justify-between bg-bg-login h-screen md:w-full bg-cover p-8'>
      <div className='space-y-10'>
         <div className='flex gap-2 items-center'>
         <img className='md:w-10 md:h-10 w-4 h-4' src={whitelogo} alt="" />
