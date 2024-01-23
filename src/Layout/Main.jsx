@@ -4,9 +4,9 @@ import SharedLeft from '../Shared/SharedLeft'
 
 const Main = () => {
   return (
-    <div className='flex'>
+    <div className='md:flex'>
         <SharedLeft/>
-        <div className='flex-1'>
+        <div className='flex-col md:flex-1 lg:flex-1'>
         <Outlet/>
         </div>
     </div>

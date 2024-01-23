@@ -11,6 +11,7 @@ import { AiOutlineTeam } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { Switch } from '@headlessui/react'
+import { BiLogIn } from "react-icons/bi";
 
 
 const navData = [
@@ -44,6 +45,12 @@ const navData = [
     navname: "Admin",
     icon: <MdOutlineSettings />,
   },
+  {
+    id: 6,
+    pathname: "/login",
+    navname: "Login",
+    icon: <BiLogIn />,
+  }
 ];
 
 const SharedLeft = () => {
@@ -66,18 +73,16 @@ const SharedLeft = () => {
       <div
         className={`${
           isDark
-            ? "w-64 bg-black text-[#006DF9]"
-            : "w-64 min-h-screen bg-[#F1F1F1] relative"
+            ? "w-full lg:w-64 bg-black text-[#006DF9] h-[calc(100vh-100px)] overflow-y-auto"
+            : "w-full lg:w-64 md:min-h-screen bg-[#F1F1F1] relative"
         }`}
       >
-        <div className="space-y-10">
-          <div className="w-56 m-auto flex gap-2 text-center justify-start items-center mt-7">
-            <div className="">
-              <img className="w-6 h-6" src={logo} alt="" />
-            </div>
+        <div className="md:space-y-10">
+          <div className="w-56 m-auto flex gap-2 text-center justify-start items-center p-4">
+              <img className="w-8 h-8" src={logo} alt="" />
             <p className="text-4xl font-semibold text-[#006DF9]">Lucidmark.</p>
           </div>
-          <div className="w-56 mb-4 m-auto rounded-full bg-[#006DF914] text-center">
+          <div className="w-56 md:mb-4 m-auto rounded-full bg-[#006DF914] text-center">
             <button
               onClick={() => handleModal(isModal)}
               className=" text-[#006DF9] p-2"
@@ -86,33 +91,31 @@ const SharedLeft = () => {
             </button>
           </div>
         </div>
-        <div className="mt-14 space-y-4">
+        <div className="flex flex-wrap md:block mt-7 md:mt-14 md:space-y-4">
           {navData.map((data) => (
-            <div key={data.id} className="w-60 m-auto space-y-1">
+            <div key={data.id} className="w-16 text-center md:w-60 m-auto space-y-1">
               <NavLink
                 to={data.pathname}
                 className={({ isActive }) =>
                   isActive
-                    ? "flex items-center gap-1 w-60 py-1.5 px-5 font-medium text-start  text-blue-700 border-l-4 border-blue-700"
-                    : "flex items-center gap-1 w-60 py-1.5 px-5 font-medium text-start border-l-4 border-white "
+                    ? "flex items-center gap-1 w-60 py-1.5 px-5 font-medium text-start  text-blue-700 md:border-l-4 border-blue-700"
+                    : "flex items-center gap-1 w-60 py-1.5 px-5 font-medium text-start md:border-l-4 border-l-[#F1F1F1] "
                 }
               >
                 <p className="text-2xl">{data.icon}</p>
-                {data.navname}
+                <p className="md:block hidden">{data.navname}</p>
               </NavLink>
             </div>
           ))}
         </div>
         {/* userbar */}
-        <div className="w-60 m-auto space-y-3 mt-32 ml-2">
-          <div
-            onClick={() => handleDarkMood(false)}
-            className="flex text-center justify-start items-center"
+        <div className="flex flex-row-reverse justify-between items-center md:block w-60 m-auto md:space-y-3 mt-3 md:mt-32 md:ml-2">
+          <div className="flex text-center justify-start items-center"
           >
             <div className="bg-blue-200 rounded-full p-2">
               <BsMoon className="text-2xl text-blue-500" />
             </div>
-            <div className="py-8 ml-4">
+            <div onClick={() => handleDarkMood(false)} className="ml-4">
               <Switch
                 checked={enabled}
                 onChange={setEnabled}
@@ -131,7 +134,7 @@ const SharedLeft = () => {
 
           <div className="flex">
             <img className="w-10 h-10 rounded-full" src={pic1} alt="" />
-            <button className="flex items-center gap-1 ml-5 font-medium text-start  hover:text-blue-700 ">
+            <button className="md:flex items-center gap-1 ml-5 font-medium text-start hover:text-blue-700 hidden ">
               Liam Trampota
               <IoIosArrowForward className="text-xl" />
             </button>
@@ -140,7 +143,7 @@ const SharedLeft = () => {
             <div className="bg-blue-200 rounded-full p-2">
               <IoIosNotifications className="text-2xl text-blue-500" />
             </div>
-            <p className="flex items-center w-60 py-1.5 px-5 font-medium text-start  hover:text-blue-700 ">
+            <p className="md:flex items-center w-60 py-1.5 px-5 font-medium text-start hover:text-blue-700 hidden">
               Notification
             </p>
           </div>

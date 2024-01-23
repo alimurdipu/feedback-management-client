@@ -23,27 +23,29 @@ const Team = () => {
       
         <div className="border-b border-gray-400 my-4"></div>
         {/* downside */}
-        <div className="flex">
+        <div className="md:flex">
           <div className="flex flex-col space-y-4 justify-between">
             <h2 className="text-xl font-bold">Pending Invites</h2>
           </div>
 
           {/* resend card */}
-          <div className="flex-1 space-y-4 ml-14">
+          <div className="md:flex-1 space-y-4 md:ml-14">
           {
-            ReqUser.map(requser => <div key={requser.id} className="flex justify-between p-4 bg-[#F1F1F1]  items-center">
-            <div className="flex items-center gap-4">
+            ReqUser.map(requser => <div key={requser.id} className="flex justify-between md:p-4 p-2 bg-[#F1F1F1]  items-center">
+            <div className="md:flex items-center md:gap-4">
+              <div className="flex gap-2 items-center md:mb-0 mb-2">
               <img src={pic} alt="" />
               <p>{requser.name}</p>
-              <button className="flex justify-around items-center w-24 px-3 py-2 font-bold text-center bg-[#006DF914] text-[#006DF9] rounded-full">
+              </div>
+              <button className="flex justify-around items-center md:w-24 px-3 py-2 font-bold text-center bg-[#006DF914] text-[#006DF9] rounded-full">
               Pending
               </button>
             </div>
-            <div className="flex items-center gap-4">
-              <button className="flex justify-around items-center w-40 py-3 text-center bg-[#006DF914] text-[#006DF9] font-bold">
+            <div className="md:flex items-center md:gap-4">
+              <button className="flex justify-around items-center md:w-40 md:py-3 p-2 text-center bg-[#006DF914] text-[#006DF9] font-bold md:mb-0 mb-2">
               Resend invite
               </button>
-              <button className="flex justify-around items-center w-40 py-3 text-center border border-[#E85656] text-[#E85656] font-bold">
+              <button className="flex justify-around items-center md:w-40 p-2 md:py-3 text-center border border-[#E85656] text-[#E85656] font-bold">
               Resend invite
               </button>
             </div>

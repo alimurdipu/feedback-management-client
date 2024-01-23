@@ -6,8 +6,12 @@ export default {
   ],
   darkMode: "class",
   theme: {
-
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'bg-login': "url('./src/assets/images/bglogin.png')",
+        'white-bg': "url('./src/assets/images/whitebg.png')"
+      }
+    },
   },
   plugins: [],
 }

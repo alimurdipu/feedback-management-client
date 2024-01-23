@@ -10,29 +10,29 @@ import { RxCross2 } from "react-icons/rx";
 const Billing = [
   {
     id: 1,
-    pdfpic: "../../../public/images/pdf.svg",
-    pdfdpic: "../../../public/images/pdfD.svg",
+    pdfpic: "/public/images/pdf.svg",
+    pdfdpic: "/public/images/pdfD.svg",
     invoiceno: "Invoice #13245",
     date: "06/01/2023"
   },
   {
     id: 2,
-    pdfpic: "../../../public/images/pdf.svg",
-    pdfdpic: "../../../public/images/pdfD.svg",
+    pdfpic: "/public/images/pdf.svg",
+    pdfdpic: "/public/images/pdfD.svg",
     invoiceno: "Invoice #13246",
     date: "07/01/2023"
   },
   {
     id: 3,
-    pdfpic: "../../../public/images/pdf.svg",
-    pdfdpic: "../../../public/images/pdfD.svg",
+    pdfpic: "/public/images/pdf.svg",
+    pdfdpic: "/public/images/pdfD.svg",
     invoiceno: "Invoice #13247",
     date: "07/01/2023"
   },
   {
     id: 4,
-    pdfpic: "../../../public/images/pdf.svg",
-    pdfdpic: "../../../public/images/pdfD.svg",
+    pdfpic: "/public/images/pdf.svg",
+    pdfdpic: "/public/images/pdfD.svg",
     invoiceno: "Invoice #13248",
     date: "08/01/2023"
   },
@@ -61,20 +61,20 @@ const RightSide = () => {
           <img className="bg-[#006DF914] p-2" src={setting} alt="" />
         </button>
         </div>
-        <div className="flex gap-4">
+        <div className="md:flex gap-4">
         <div className="flex-1 p-8">
           {/* form start */}
           <div className="mt-10">
-            <div className="flex justify-between mb-10">
+            <div className="md:flex justify-between mb-5 md:mb-10">
               <h2 className="text-xl font-bold">Personal information</h2>
               <p className="text-xl font-bold text-[#006DF9]">Edit</p>
             </div>
             <form onSubmit={handleSubmit(onSubmit)}>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="md:grid grid-cols-2 gap-4">
                 <div>
                   <p>First Name</p>
                   <input
-                    className="w-full border border-gray-400 rounded-sm p-3"
+                    className="md:w-full border border-gray-400 rounded-sm p-3"
                     placeholder="First Name"
                     {...register("firstName")}
                   />
@@ -82,7 +82,7 @@ const RightSide = () => {
                 <div>
                   <p>Password</p>
                   <input
-                    className="w-full border border-gray-400 rounded-sm p-3"
+                    className="md:w-full border border-gray-400 rounded-sm p-3"
                     placeholder="First Name"
                     {...register("firstName")}
                   />
@@ -90,7 +90,7 @@ const RightSide = () => {
                 <div>
                   <p>Last Name</p>
                   <input
-                    className="w-full border border-gray-400 rounded-sm p-3"
+                    className="md:w-full border border-gray-400 rounded-sm p-3"
                     placeholder="First Name"
                     {...register("firstName")}
                   />
@@ -98,7 +98,7 @@ const RightSide = () => {
                 <div>
                   <p>Email</p>
                   <input
-                    className="w-full border border-gray-400 rounded-sm p-3"
+                    className="md:w-full border border-gray-400 rounded-sm p-3"
                     placeholder="First Name"
                     {...register("firstName")}
                   />
@@ -110,26 +110,26 @@ const RightSide = () => {
           <h2 className="text-xl font-bold mt-16">Admin</h2>
           {/* card start */}
           <div className="rounded-md h-72 mt-8 bg-gradient-to-r from-[#006DF9] to-[#0b5eca]">
-            <div className="flex justify-between p-5">
+            <div className="md:flex justify-between p-2 md:p-5">
               <div>
                 <h2 className="text-2xl text-white">Business PRO</h2>
                 <p className="text-white">Includes up to 20 users</p>
               </div>
               <div>
-                <button className="border p-2 rounded-md text-[#FFFFFF] bg-gray-400">
+                <button className="border p-1 md:p-2 rounded-md text-[#FFFFFF] bg-gray-400">
                   Manage plan
                 </button>
               </div>
             </div>
-            <div className="w-96 m-auto bg-opacity-20 rounded-md bg-white p-5">
-              <div className="flex justify-between">
+            <div className="md:w-96 m-auto bg-opacity-20 rounded-md bg-white p-2 md:p-5">
+              <div className="md:flex justify-between">
                 <div className="space-y-3">
                   <h2 className="text-2xl text-white">Payment</h2>
-                  <img className="bg-white p-4 rounded-md" src={visa} alt="" />
+                  <img className="bg-white p-1 md:p-4 rounded-md" src={visa} alt="" />
                   <p className="text-white">Visa ending in 5325</p>
                 </div>
                 <div>
-                  <button className="border p-2 rounded-md text-[#FFFFFF] bg-gray-400">
+                  <button className="border p-1 md:p-2 rounded-md text-[#FFFFFF] bg-gray-400">
                     Change
                   </button>
                 </div>
@@ -138,20 +138,20 @@ const RightSide = () => {
           </div>
           {/* card end */}
         </div>
-        <div className="flex-1 p-8">
-        <div className="mt-9 space-y-4 p-1">
+        <div className="md:flex-1 p-8">
+        <div className="md:mt-9 space-y-4 p-1">
           <p className="text-xl font-bold mb-12">Integrations</p>
           <div className="w-full h-44 bg-[#F1F1F1]"></div>
         </div>
-        <div className="flex justify-between mt-10 p-1">
+        <div className="md:flex justify-between mt-10 p-1">
           <h2 className="text-xl font-bold">Personal information</h2>
           <p className="text-xl font-bold text-[#006DF9]">Edit</p>
         </div>
         <div className="mt-6 space-y-4">
         {
-          Billing.map(bill => <div key={bill.id} className="flex justify-between bg-[#F1F1F1]  items-center p-1">
+          Billing.map(bill => <div key={bill.id} className="md:flex justify-between bg-[#F1F1F1]  items-center md:p-1 p-4">
           <img src={pdfpic} alt="" />
-          <div className="flex gap-10">
+          <div className="md:flex gap-10">
               <p>{bill.invoiceno}</p>
               <p>{bill.date}</p>
           </div>

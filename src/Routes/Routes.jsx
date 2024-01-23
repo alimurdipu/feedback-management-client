@@ -6,6 +6,7 @@ import Team from '../Pages/Team/Team';
 import Dashboard from '../Pages/Dashboard/Dashboard';
 import Environment from '../Pages/Environment/Environment';
 import Task from '../Pages/Task/Task';
+import Login from '../Pages/Login/Login';
 
   export const router = createBrowserRouter([
     {
@@ -31,6 +32,10 @@ import Task from '../Pages/Task/Task';
         {
           path: '/admin',
           element: <FirstPage/>
+        },
+        {
+          path: '/login',
+          element: <Login/>
         }
       ]
     },

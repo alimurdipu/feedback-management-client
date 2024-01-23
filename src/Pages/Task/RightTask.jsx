@@ -1,13 +1,8 @@
 import React from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import setting from "../../../public/images/setting.svg";
-import camera from "../../../public/images/camera.svg";
 import envImg from "../../../public/images/Rectangle 153.png";
 import profile from "../../../public/images/Ellipse 7.svg";
-import down from "../../../public/images/down.svg";
-import eye from "../../../public/images/eye.svg";
-import massage from "../../../public/images/massage.svg";
-import user from "../../../public/images/user-card-4.jpg";
 import { GrAttachment } from "react-icons/gr";
 import { BsChatRightText } from "react-icons/bs";
 
@@ -28,59 +23,62 @@ const RightTask = () => {
           <img className="bg-[#006DF914] p-2" src={setting} alt="" />
         </button>
       </div>
-      <div className="grid grid-cols-4 gap-4 mb-4">
+      <div className="lg:grid grid-cols-4 gap-4 mb-4 hidden">
         <p className="font-bold text-xl">To do</p>
         <p className="font-bold text-xl">In progress</p>
         <p className="font-bold text-xl">In review</p>
         <p className="font-bold text-xl">Done</p>
       </div>
       {/* grid col */}
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-rows-4 lg:grid-cols-4 gap-4 ">
         {/* card start */}
-        <div className="space-y-3 min-h-screen bg-[#F1F1F1]">
-          <div className="w-56 rounded-3xl border p-2 bg-white">
-            <div>
-              <h2 className="text-xl font-bold">
-                Comments about Access Management
-              </h2>
-              <img className="w-full mb-4" src={envImg} alt="" />
-            </div>
-            <div className="space-y-4 mt-4">
-              <div className="flex justify-between items-center">
-                <div className="flex gap-4 items-center">
-                  <p className="flex gap-2 items-center"><GrAttachment /> 4</p>
-                  <p className="flex gap-2 items-center"><BsChatRightText /> 6</p>
-                </div>
-                <div className="flex gap-2 items-center">
-                  <img src={profile} alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="w-56 rounded-3xl border p-2 bg-white">
-            <div>
-              <h2 className="text-xl font-bold">
-                Comments about Access Management
-              </h2>
-              <img className="w-full mb-4" src={envImg} alt="" />
-            </div>
-            <div className="space-y-4 mt-4">
-              <div className="flex justify-between items-center">
-                <div className="flex gap-4 items-center">
-                  <p className="flex gap-2 items-center"><GrAttachment /> 4</p>
-                  <p className="flex gap-2 items-center"><BsChatRightText /> 6</p>
-                </div>
-                <div className="flex gap-2 items-center">
-                  <img src={profile} alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="space-y-3 min-h-screen bg-[#F1F1F1]">
         
+        <div className="space-y-3 min-h-screen bg-[#F1F1F1]">
+        <p className="font-bold text-xl lg:hidden">To do</p>
+          <div className="w-56 rounded-3xl border p-2 bg-white">
+            <div>
+              <h2 className="text-xl font-bold">
+                Comments about Access Management
+              </h2>
+              <img className="w-full mb-4" src={envImg} alt="" />
+            </div>
+            <div className="space-y-4 mt-4">
+              <div className="flex justify-between items-center">
+                <div className="flex gap-4 items-center">
+                  <p className="flex gap-2 items-center"><GrAttachment /> 4</p>
+                  <p className="flex gap-2 items-center"><BsChatRightText /> 6</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                  <img src={profile} alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="w-56 rounded-3xl border p-2 bg-white">
+            <div>
+              <h2 className="text-xl font-bold">
+                Comments about Access Management
+              </h2>
+              <img className="w-full mb-4" src={envImg} alt="" />
+            </div>
+            <div className="space-y-4 mt-4">
+              <div className="flex justify-between items-center">
+                <div className="flex gap-4 items-center">
+                  <p className="flex gap-2 items-center"><GrAttachment /> 4</p>
+                  <p className="flex gap-2 items-center"><BsChatRightText /> 6</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                  <img src={profile} alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="space-y-3 min-h-screen bg-[#F1F1F1]">
+        <p className="font-bold text-xl lg:hidden">In progress</p>
+        </div>
+        <div className="space-y-3 min-h-screen bg-[#F1F1F1]">
+        <p className="font-bold text-xl lg:hidden">In review</p>
           <div className="w-56 rounded-3xl border p-2 bg-white">
             <div>
               <h2 className="text-xl font-bold">
@@ -140,6 +138,7 @@ const RightTask = () => {
           </div>
         </div>
         <div className=" space-y-3 min-h-screen bg-[#F1F1F1]">
+        <p className="font-bold text-xl lg:hidden">Done</p>
           <div className="w-56 rounded-3xl border p-2 bg-white">
             <div>
               <h2 className="text-xl font-bold">
