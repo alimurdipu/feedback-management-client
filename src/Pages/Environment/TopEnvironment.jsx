@@ -91,7 +91,7 @@ const TopEnvironment = () => {
               </button>
               <button onClick={() => handelGrid("grid")}>
                 <img
-                  className={`${gridView === "grid" ? "bg-[#006DF9]" : ""}`}
+                  className={`${gridView === "grid" ? "bg-[#006DF9] text-white" : ""}`}
                   src={gridview}
                   alt=""
                 />

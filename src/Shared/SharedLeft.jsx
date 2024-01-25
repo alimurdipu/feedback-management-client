@@ -10,9 +10,8 @@ import { BiTask } from "react-icons/bi";
 import { AiOutlineTeam } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { Switch } from '@headlessui/react'
+import { Switch } from "@headlessui/react";
 import { BiLogIn } from "react-icons/bi";
-
 
 const navData = [
   {
@@ -50,7 +49,7 @@ const navData = [
     pathname: "/login",
     navname: "Login",
     icon: <BiLogIn />,
-  }
+  },
 ];
 
 const SharedLeft = () => {
@@ -67,7 +66,7 @@ const SharedLeft = () => {
   const handleDarkMood = () => {
     setDark(!isDark);
   };
-  const [enabled, setEnabled] = useState(false)
+  const [enabled, setEnabled] = useState(false);
   return (
     <>
       <div
@@ -77,12 +76,12 @@ const SharedLeft = () => {
             : "w-full lg:w-64 md:min-h-screen bg-[#F1F1F1] relative"
         }`}
       >
-        <div className="md:space-y-10">
+        <div className="">
           <div className="w-56 m-auto flex gap-2 text-center justify-start items-center p-4">
-              <img className="w-8 h-8" src={logo} alt="" />
-            <p className="text-4xl font-semibold text-[#006DF9]">Lucidmark.</p>
+            <img className="w-8 h-8" src={logo} alt="" />
+            <p className="text-2xl font-semibold text-[#006DF9]">Lucidmark.</p>
           </div>
-          <div className="w-56 md:mb-4 m-auto rounded-full bg-[#006DF914] text-center">
+          <div className="w-56  mt-3 m-auto rounded-full bg-[#006DF914] text-center">
             <button
               onClick={() => handleModal(isModal)}
               className=" text-[#006DF9] p-2"
@@ -91,9 +90,12 @@ const SharedLeft = () => {
             </button>
           </div>
         </div>
-        <div className="flex flex-wrap md:block mt-7 md:mt-14 md:space-y-4">
+        <div className="flex flex-wrap md:block mt-4 md:mt-14 md:space-y-4">
           {navData.map((data) => (
-            <div key={data.id} className="w-16 text-center md:w-60 m-auto space-y-1">
+            <div
+              key={data.id}
+              className="w-16 text-center md:w-60 m-auto space-y-1"
+            >
               <NavLink
                 to={data.pathname}
                 className={({ isActive }) =>
@@ -110,8 +112,7 @@ const SharedLeft = () => {
         </div>
         {/* userbar */}
         <div className="flex flex-row-reverse justify-between items-center md:block w-60 m-auto md:space-y-3 mt-3 md:mt-32 md:ml-2">
-          <div className="flex text-center justify-start items-center"
-          >
+          <div className="flex text-center justify-start items-center">
             <div className="bg-blue-200 rounded-full p-2">
               <BsMoon className="text-2xl text-blue-500" />
             </div>
