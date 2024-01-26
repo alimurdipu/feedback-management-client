@@ -9,8 +9,8 @@ const Login = () => {
   console.log(errors);
 
   return (
-    <div className='md:flex justify-between bg-bg-login h-screen md:w-full bg-cover p-8'>
-     <div className='space-y-10'>
+    <div className='md:flex justify-between bg-bg-login h-full md:w-full bg-cover p-8 rounded-3xl'>
+     <div className='md:space-y-10 p-3'>
         <div className='flex gap-2 items-center'>
         <img className='md:w-10 md:h-10 w-4 h-4' src={whitelogo} alt="" />
         <p className='text-white text-2xl md:text-5xl'>Lucidmark</p>
@@ -22,8 +22,8 @@ const Login = () => {
           </div>
         </div>
      </div>
-     <div className='md:w-[400px] md:h-[550px]  bg-[#FFFFFF] rounded-xl p-1 mb-2'>
-      <div className='flex flex-col text-center my-10'>
+     <div className='md:w-[400px] md:h-[550px] bg-[#FFFFFF] rounded-xl p-1'>
+      <div className='flex flex-col text-center p-5'>
         <img className='w-10 h-10 m-auto text-center text-black' src={mainImg} alt="" />
         <h2 className='text-2xl'>Welcome</h2>
         <p className='text-[#868686]'>Please enter your details</p>
@@ -40,7 +40,7 @@ const Login = () => {
         <p className='text-center'>Log In With Google</p>
       </button>
     </form>
-    <p className='text-center md:mt-24'>Don't have an account? <span className='font-bold'>Sign Up</span></p>
+    <p className='text-center md:pt-10 p-2'>Don't have an account? <span className='font-bold'>Sign Up</span></p>
     </div>
       
     </div>

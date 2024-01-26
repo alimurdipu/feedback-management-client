@@ -41,8 +41,8 @@ const TopEnvironment = () => {
       <div
         className={`${
           open
-            ? "md:flex md:justify-between md:mt-4"
-            : "md:flex md:justify-between md:mt-4 md:relative"
+            ? "md:flex md:justify-between"
+            : "md:flex md:justify-between md:relative"
         }`}
       >
         {/* <div className=""> */}
@@ -114,10 +114,11 @@ const TopEnvironment = () => {
               <p className="md:ml-16 font-bold text-[#A1A1A1]">Media</p>
               <p className="md:ml-24 font-bold text-[#A1A1A1]">Status</p>
             </div>
+            <div className="h-[calc(100vh-210px)] overflow-scroll overflow-x-hidden">
             {environments.map((environment, index) => (
               <div
                 key={index}
-                className="md:flex md:justify-between text-center md:items-center p-4 bg-[#F1F1F1] rounded-md mb-4 space-y-2"
+                className="md:flex md:justify-between text-center md:items-center p-4 bg-[#F1F1F1] rounded-md mb-4 space-y-2 "
               >
                 <img className="md:ml-0 ml-16" src={envImg} alt="" />
                 <p>#{index + 1}</p>
@@ -136,13 +137,14 @@ const TopEnvironment = () => {
                 </div>
               </div>
             ))}
+            </div>
           </div>
         ) : (
           <div
             className={`${
               open
                 ? "md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10 mb-2"
-                : "md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10 mb-2"
+                : "md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10 mb-2 h-[calc(100vh-180px)] overflow-scroll overflow-x-hidden"
             }`}
           >
             {userdatas.map((user) => (

@@ -30,10 +30,10 @@ const RightTask = () => {
         <p className="font-bold text-xl">Done</p>
       </div>
       {/* grid col */}
-      <div className="grid grid-rows-4 lg:grid-cols-4 gap-4 ">
+      <div className="grid grid-rows-4 lg:grid-cols-4 gap-4 h-[calc(65vh)] overflow-scroll overflow-x-hidden">
         {/* card start */}
         
-        <div className="space-y-3 min-h-screen bg-[#F1F1F1]">
+        <div className="space-y-3 h-fit m-auto p-2 bg-[#F1F1F1]">
         <p className="font-bold text-xl lg:hidden">To do</p>
           <div className="w-56 rounded-3xl border p-2 bg-white">
             <div>
@@ -74,10 +74,10 @@ const RightTask = () => {
             </div>
           </div>
         </div>
-        <div className="space-y-3 min-h-screen bg-[#F1F1F1]">
+        <div className="space-y-3 min-h-full m-auto bg-[#F1F1F1]">
         <p className="font-bold text-xl lg:hidden">In progress</p>
         </div>
-        <div className="space-y-3 min-h-screen bg-[#F1F1F1]">
+        <div className="space-y-3 h-fit m-auto p-2 bg-[#F1F1F1]">
         <p className="font-bold text-xl lg:hidden">In review</p>
           <div className="w-56 rounded-3xl border p-2 bg-white">
             <div>
@@ -137,7 +137,7 @@ const RightTask = () => {
             </div>
           </div>
         </div>
-        <div className=" space-y-3 min-h-screen bg-[#F1F1F1]">
+        <div className=" space-y-3 h-fit m-auto p-2 bg-[#F1F1F1]">
         <p className="font-bold text-xl lg:hidden">Done</p>
           <div className="w-56 rounded-3xl border p-2 bg-white">
             <div>

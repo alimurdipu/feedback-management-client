@@ -56,11 +56,11 @@ const SharedLeft = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => console.log(data);
 
-  const [isModal, setIsModal] = useState(false);
+  // const [isModal, setIsModal] = useState(false);
 
-  const handleModal = () => {
-    setIsModal(!isModal);
-  };
+  // const handleModal = () => {
+  //   setIsModal(!isModal);
+  // };
 
   const [isDark, setDark] = useState(false);
   const handleDarkMood = () => {
@@ -72,36 +72,36 @@ const SharedLeft = () => {
       <div
         className={`${
           isDark
-            ? "w-full lg:w-64 bg-black text-[#006DF9]"
+            ? "w-full lg:w-64 md:min-h-screen bg-black text-[#7C7C7C]"
             : "w-full lg:w-64 md:min-h-screen bg-[#F1F1F1] relative"
         }`}
       >
         <div className="">
           <div className="w-56 m-auto flex gap-2 text-center justify-start items-center p-4">
             <img className="w-8 h-8" src={logo} alt="" />
-            <p className="text-2xl font-semibold text-[#006DF9]">Lucidmark.</p>
+            <p className={`${isDark ? "text-2xl font-semibold text-[#F1F1F1]" : "text-2xl font-semibold text-[#006DF9]"}`}>Lucidmark.</p>
           </div>
-          <div className="w-56  mt-3 m-auto rounded-full bg-[#006DF914] text-center">
+          <div className={`${isDark ? "w-56 mt-3 m-auto rounded-full bg-[#006DF9] text-center" : "w-56 mt-3 m-auto rounded-full bg-[#006DF914] text-center"}`}>
             <button
-              onClick={() => handleModal(isModal)}
-              className=" text-[#006DF9] p-2"
+              // onClick={() => handleModal(isModal)}
+              className={`${isDark ? "text-[#F1F1F1] p-2" : "text-[#006DF9] p-2"}`}
             >
               + New Environment
             </button>
           </div>
         </div>
-        <div className="flex flex-wrap md:block mt-4 md:mt-14 md:space-y-4">
+        <div className="flex flex-wrap md:block pt-4 md:pt-10 md:space-y-4">
           {navData.map((data) => (
             <div
               key={data.id}
-              className="w-16 text-center md:w-60 m-auto space-y-1"
+              className="w-16 text-center md:w-60 m-auto"
             >
               <NavLink
                 to={data.pathname}
                 className={({ isActive }) =>
                   isActive
                     ? "flex items-center gap-1 w-60 py-1.5 px-5 font-medium text-start  text-blue-700 md:border-l-4 border-blue-700"
-                    : "flex items-center gap-1 w-60 py-1.5 px-5 font-medium text-start md:border-l-4 border-l-transparent "
+                    : "flex items-center gap-1 w-60 py-1.5 px-5 font-medium text-start md:border-l-4 border-l-transparent"
                 }
               >
                 <p className="text-2xl">{data.icon}</p>
@@ -111,8 +111,8 @@ const SharedLeft = () => {
           ))}
         </div>
         {/* userbar */}
-        <div className="flex flex-row-reverse justify-between items-center md:block w-60 m-auto md:space-y-3 mt-3 md:mt-32 md:ml-2">
-          <div className="flex text-center justify-start items-center">
+        <div className="flex flex-row-reverse justify-between items-center md:block w-60 m-auto md:space-y-3 mt-3 md: md:ml-2">
+          <div className="flex text-center justify-start md:pt-8 items-center">
             <div className="bg-blue-200 rounded-full p-2">
               <BsMoon className="text-2xl text-blue-500" />
             </div>
@@ -152,10 +152,10 @@ const SharedLeft = () => {
         {/* userbar */}
       </div>
       {/* modal */}
-      <div
+      {/* <div
         className={`${
           isModal
-            ? "w-[600px] h-[320px] p-8 rounded-3xl bg-white absolute mt-20 ml-96 z-10 shadow-2xl shadow-gray-600"
+            ? "w-[600px] h-[320px] p-8 rounded-3xl bg-white absolute -mt-96 ml-96 z-10 shadow-2xl shadow-gray-600"
             : "hidden"
         }`}
       >
@@ -215,7 +215,7 @@ const SharedLeft = () => {
             Cancel
           </button>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

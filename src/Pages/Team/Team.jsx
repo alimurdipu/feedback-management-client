@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import RightTeam from "./RightTeam";
 import pic from "../../../public/images/Ellipse 7.svg"
 
@@ -16,9 +16,10 @@ const ReqUser = [
 ]
 
 const Team = () => {
+ 
   return (
     <>
-      <div className="flex-1 p-4">
+      <div className="flex-1 p-4 h-[calc(100vh)] overflow-scroll overflow-x-hidden">
         <RightTeam />
       
         <div className="border-b border-gray-400 my-4"></div>
@@ -58,6 +59,8 @@ const Team = () => {
         
          {/* downside end */}
       </div>
+
+     
     </>
   );
 };
