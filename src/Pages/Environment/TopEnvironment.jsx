@@ -37,7 +37,7 @@ const TopEnvironment = () => {
   };
 
   return (
-    <div className="  h-[calc(100vh-32px)] overflow-hidden">
+    <div className="h-[calc(100vh-32px)] overflow-hidden">
       <div
         onClick={() => handleSideBar(false)}
         className={`bg-black/60 z-10 cursor-pointer ${
