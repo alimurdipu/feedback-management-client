@@ -91,7 +91,9 @@ const TopEnvironment = () => {
               </button>
               <button onClick={() => handelGrid("grid")}>
                 <img
-                  className={`${gridView === "grid" ? "bg-[#006DF9] text-white" : ""}`}
+                  className={`${
+                    gridView === "grid" ? "bg-[#006DF9] text-white" : ""
+                  }`}
                   src={gridview}
                   alt=""
                 />
@@ -114,29 +116,31 @@ const TopEnvironment = () => {
               <p className="md:ml-16 font-bold text-[#A1A1A1]">Media</p>
               <p className="md:ml-24 font-bold text-[#A1A1A1]">Status</p>
             </div>
-            <div className="h-[calc(100vh-210px)] overflow-scroll overflow-x-hidden">
-            {environments.map((environment, index) => (
-              <div
-                key={index}
-                className="md:flex md:justify-between text-center md:items-center p-4 bg-[#F1F1F1] rounded-md mb-4 space-y-2 "
-              >
-                <img className="md:ml-0 ml-16" src={envImg} alt="" />
-                <p>#{index + 1}</p>
-                <p>Contact Form</p>
-                <p>Contact Form</p>
-                <div className="flex justify-around gap-4">
-                  <img src={camera} alt="" />
-                  <img src={vedio} alt="" />
+            <div className="h-[calc(100vh-207.941px)] overflow-hidden overflow-y-scroll scrollbar-hide">
+              {environments.map((environment, index) => (
+                <div
+                  key={index}
+                  className="md:flex md:justify-between text-center md:items-center p-4 bg-[#F1F1F1] rounded-md mb-4 space-y-2 "
+                >
+                  <img className="md:ml-0 ml-16" src={envImg} alt="" />
+                  <p>#{index + 1}</p>
+                  <p>Contact Form</p>
+                  <p>Contact Form</p>
+                  <div className="flex justify-around gap-4">
+                    <img src={camera} alt="" />
+                    <img src={vedio} alt="" />
+                  </div>
+                  <div className="flex gap-4">
+                    <button className="bg-orange-200 w-32 text-center py-2 rounded-full text-orange-500 font-bold">
+                      Review
+                    </button>
+                    <button className="text-[#006DF9] font-bold">Export</button>
+                    <button className="text-[#006DF9] font-bold">
+                      Details
+                    </button>
+                  </div>
                 </div>
-                <div className="flex gap-4" >
-                <button className="bg-orange-200 w-32 text-center py-2 rounded-full text-orange-500 font-bold">
-                  Review
-                </button>
-                <button className="text-[#006DF9] font-bold">Export</button>
-                <button className="text-[#006DF9] font-bold">Details</button>
-                </div>
-              </div>
-            ))}
+              ))}
             </div>
           </div>
         ) : (
@@ -144,7 +148,7 @@ const TopEnvironment = () => {
             className={`${
               open
                 ? "md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10 mb-2"
-                : "md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10 mb-2 h-[calc(100vh-180px)] overflow-scroll overflow-x-hidden"
+                : "md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10 mb-2 h-[calc(100vh-180px)] overflow-hidden overflow-y-scroll scrollbar-hide"
             }`}
           >
             {userdatas.map((user) => (

@@ -79,23 +79,36 @@ const SharedLeft = () => {
         <div className="">
           <div className="w-56 m-auto flex gap-2 text-center justify-start items-center p-4">
             <img className="w-8 h-8" src={logo} alt="" />
-            <p className={`${isDark ? "text-2xl font-semibold text-[#F1F1F1]" : "text-2xl font-semibold text-[#006DF9]"}`}>Lucidmark.</p>
+            <p
+              className={`${
+                isDark
+                  ? "text-2xl font-semibold text-[#F1F1F1]"
+                  : "text-2xl font-semibold text-[#006DF9]"
+              }`}
+            >
+              Lucidmark.
+            </p>
           </div>
-          <div className={`${isDark ? "w-56 mt-3 m-auto rounded-full bg-[#006DF9] text-center" : "w-56 mt-3 m-auto rounded-full bg-[#006DF914] text-center"}`}>
+          <div
+            className={`${
+              isDark
+                ? "w-56 mt-3 m-auto rounded-full bg-[#006DF9] text-center"
+                : "w-56 mt-3 m-auto rounded-full bg-[#006DF914] text-center"
+            }`}
+          >
             <button
               // onClick={() => handleModal(isModal)}
-              className={`${isDark ? "text-[#F1F1F1] p-2" : "text-[#006DF9] p-2"}`}
+              className={`${
+                isDark ? "text-[#F1F1F1] p-2" : "text-[#006DF9] p-2"
+              }`}
             >
               + New Environment
             </button>
           </div>
         </div>
-        <div className="flex flex-wrap md:block pt-4 md:pt-10 md:space-y-4">
+        <div className="flex flex-wrap md:block pt-4 h-[calc(100vh-345.594px)] md:pt-7 md:space-y-4">
           {navData.map((data) => (
-            <div
-              key={data.id}
-              className="w-16 text-center md:w-60 m-auto"
-            >
+            <div key={data.id} className="w-16 text-center md:w-60 m-auto">
               <NavLink
                 to={data.pathname}
                 className={({ isActive }) =>
