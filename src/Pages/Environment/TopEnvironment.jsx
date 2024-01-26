@@ -17,6 +17,7 @@ import { FaPencil } from "react-icons/fa6";
 import { profile } from "../../assets/images/Images";
 
 const TopEnvironment = () => {
+  const [open, setOpen] = useState(false);
   const [environments, setEnvironment] = useState([1, 2, 3, 4, 5, 6, 7]);
   const [userdatas, setuserData] = useState([]);
 
@@ -31,13 +32,27 @@ const TopEnvironment = () => {
     setGridView(viewType);
   };
 
-  const [open, setOpen] = useState(false);
   const handleSideBar = () => {
     setOpen(!open);
   };
 
   return (
-    <>
+    <div className="  h-[calc(100vh-32px)] overflow-hidden">
+      <div
+        onClick={() => handleSideBar(false)}
+        className={`bg-black/60 z-10 cursor-pointer ${
+          open ? "fixed" : "hidden"
+        } top-0 left-0 right-0 bottom-0
+      `}
+      ></div>
+      <div
+        className={`w-4/12 h-screen z-20 p-5 bg-white ${
+          open ? "fixed" : "hidden "
+        } right-0 top-0`}
+      >
+        sidebar content
+      </div>
+
       <div
         className={`${
           open
@@ -197,10 +212,11 @@ const TopEnvironment = () => {
         )}
       </div>
       {/* sidebar */}
-      <div
+
+      {/* <div
         className={`${
           open
-            ? "lg:w-1/2 md:w-[600px] w-full min-h-screen border p-8 space-y-5 absolute lg:-mt-[961px] lg:ml-[354px] bg-white"
+            ? "lg:w-1/2 md:w-[600px] w-full  border p-8 space-y-5 fixed lg:-mt-[961px] lg:ml-[354px] bg-white"
             : "hidden"
         }`}
       >
@@ -257,10 +273,10 @@ const TopEnvironment = () => {
             Review
           </button>
         </div>
-      </div>
+      </div> */}
       {/* tab */}
       <div></div>
-    </>
+    </div>
   );
 };
 
